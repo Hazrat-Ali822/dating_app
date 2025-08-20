@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Signup</title>
+
+    <!-- Load static files -->
+    {% load static %}
+
+
+    <!-- Link to the styles.css file -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h2>User Signup</h2>
+        <form id="signupForm" method="POST">
+            
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+
+            <label for="date_of_birth">Date of Birth:</label>
+            <input type="date" id="date_of_birth" name="date_of_birth" required><br><br>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select><br><br>
+
+            <label for="country">Country:</label>
+            <input type="text" id="country" name="country" required><br><br>
+
+            <label for="interests">Interests:</label>
+            <select id="interests" name="interests[]" multiple required>
+                <option value="Travel">Travel</option>
+                <option value="Technology">Technology</option>
+                <option value="Nature">Nature</option>
+                <option value="Gym">Gym</option>
+                <option value="Animal">Animal</option>
+                <option value="Music">Music</option>
+                <option value="Arts">Arts</option>
+                <option value="Fashion">Fashion</option>
+                <option value="Gaming">Gaming</option>
+            </select><br><br>
+
+            <label for="marital_status">Marital Status:</label>
+            <select id="marital_status" name="marital_status" required>
+                <option value="Never married">Never married</option>
+                <option value="Widowed">Widowed</option>
+                <option value="Annulled">Annulled</option>
+                <option value="Separated">Separated</option>
+                <option value="Divorced">Divorced</option>
+            </select><br><br>
+
+            <label for="wedding_timeline">Wedding Timeline:</label>
+            <select id="wedding_timeline" name="wedding_timeline" required>
+                <option value="Within 3 years">Within 3 years</option>
+                <option value="Immediately">Immediately</option>
+                <option value="Within a year">Within a year</option>
+                <option value="With a year">With a year</option>
+                <option value="Within 3+ years">Within 3+ years</option>
+            </select><br><br>
+
+            <label for="profession">Profession:</label>
+            <input type="text" id="profession" name="profession" required><br><br>
+
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+</body>
+</html>
